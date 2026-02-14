@@ -85,7 +85,22 @@ function App() {
 
 
   return (
-    <main id="canvas" className="fondo w-screen h-screen bg-no-repeat bg-cover flex items-center justify-center bg-center ">
+    <main id="canvas" className="fondo relative w-screen h-screen bg-no-repeat bg-cover flex items-center justify-center">
+      <img
+        src="BUBU.jpg"   // o "/extra.png"
+        alt="overlay"
+        className="absolute top-6 right-6 w-40 md:w-56 opacity-90 pointer-events-none"
+     />
+       <img
+        src="OUR.jpg"   // o "/extra.png"
+        alt="overlay"
+        className="absolute top-6 left-2 w-40 md:w-56 opacity-90 pointer-events-none"
+     />
+       <img
+        src="KUMA.jpeg"   // o "/extra.png"
+        alt="overlay"
+        className="absolute bottom-6 left-2 w-40 md:w-56 opacity-90 pointer-events-none"
+     />
       {
         !valueSi ? (
           <div className="p-5">
