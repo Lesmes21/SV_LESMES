@@ -86,21 +86,7 @@ function App() {
 
   return (
     <main id="canvas" className="fondo relative w-screen h-screen bg-no-repeat bg-cover flex items-center justify-center">
-      <img
-        src="BUBU.jpg"   // o "/extra.png"
-        alt="overlay"
-        className="absolute top-6 right-6 w-40 md:w-56 opacity-90 pointer-events-none"
-     />
-       <img
-        src="OUR.jpg"   // o "/extra.png"
-        alt="overlay"
-        className="absolute top-6 left-2 w-40 md:w-56 opacity-90 pointer-events-none"
-     />
-       <img
-        src="KUMA.jpeg"   // o "/extra.png"
-        alt="overlay"
-        className="absolute bottom-6 left-2 w-40 md:w-56 opacity-90 pointer-events-none"
-     />
+      
       {
         !valueSi ? (
           <div className="p-5">
@@ -126,17 +112,43 @@ function App() {
                 disabled={imagenCargada} // Deshabilita el botón si la imagen no se ha cargado
               >
                 {Object.keys(randomValor).length === 0 ? "No" : randomValor.description}
-                <span hidden>{document.title = Object.keys(randomValor).length === 0 ? "¿Quieres ser mi San Valentin?" : randomValor.description}</span>
+                <span hidden>{document.title = Object.keys(randomValor).length === 0 ? "¿Nini,Quieres ser mi San Valentin?" : randomValor.description}</span>
               </button>
             </div>
           </div>
         ) : (
-          <div className="flex justify-center items-center flex-col space-y-10">
-            <h1 className="text-4xl text-white font-bold">Sabia que dirias que si ❤️!</h1>
-            <img src="https://i.pinimg.com/originals/9b/dc/c6/9bdcc6206c1d36a37149d31108c6bb41.gif" alt="" className="mx-auto" />
-            <span hidden>{document.title = 'Sabia que dirias que si ❤️!'}</span>
-          </div>
-        )
+  <div className="relative flex justify-center items-center flex-col space-y-10">
+    <h1 className="text-4xl text-white font-bold">DIJISTE SÍ MI BEBU ❤️!</h1>
+
+    <img
+      src="https://i.pinimg.com/originals/9b/dc/c6/9bdcc6206c1d36a37149d31108c6bb41.gif"
+      alt=""
+      className="mx-auto"
+    />
+
+    <span hidden>{(document.title = "Sabía que dirías que sí ❤️!")}</span>
+
+    {/* Overlays SOLO en página 2 */}
+    <img
+      src="/OUR.jpg"
+      alt="overlay"
+      className="absolute top-6 right-2 w-40 md:w-30 opacity-90 pointer-events-none"
+    />
+
+    <img
+      src="/BUBU.jpg"
+      alt="overlay"
+      className="absolute top-6 left-1 w-40 md:w-30 opacity-90 pointer-events-none"
+    />
+
+    <img
+      src="/KUMA.jpeg"
+      alt="overlay"
+      className="absolute bottom-2 right-2 w-28 md:w-32 opacity-90 pointer-events-none"
+    />
+  </div>
+)
+
       }
     </main>
   )
